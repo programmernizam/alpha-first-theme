@@ -89,6 +89,21 @@ function alpha_customize_register($wp_customize)
             'dark' => __('Dark', 'alpha'),
         ),
     ));
+    // Footer Theme Option
+    $wp_customize->add_section('alpha_footer_option', array(
+        'title' => __('Footer Option', 'alpha'),
+        'description' => 'You can change the footer option here.',
+    ));
+    $wp_customize->add_setting('alpha_copyright_text', array(
+        'default' => '&copy; Copyright ' . date('Y') . ' Alpha. All rights reserved.',
+    ));
+    $wp_customize->add_control('alpha_copyright_text', array(
+        'label' => 'Copyright Text',
+        'description' => 'If you want to change the copyright text, you can do it here.',
+        'section' => 'alpha_footer_option',
+        'settings' => 'alpha_copyright_text',
+        'type' => 'textarea',
+    ));
 };
 
 add_action('customize_register', 'alpha_customize_register');

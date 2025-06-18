@@ -154,3 +154,22 @@ img {
 #header_area.dark .col-md-9 ul li a {
   color: #fff;
 }
+
+/* ========
+@Footer Css
+======== */
+
+#copyright_area {
+  background: #262626;
+  padding: 20px 0;
+}
+#copyright_area p {
+  color: #fff;
+  margin: 0;
+  text-align: center;
+  font-size: 14px;
+}
+#copyright_area p a {
+  color: #ea1a70;
+  text-decoration: none;
+}
