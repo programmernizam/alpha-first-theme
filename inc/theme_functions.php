@@ -72,6 +72,67 @@ function alpha_customize_register($wp_customize)
         'settings' => 'alpha_copyright_text',
         'type' => 'textarea',
     ));
+
+    // Theme Color & Options
+    $wp_customize->add_section('alpha_theme_color', array(
+        'title' => __('Theme Color & Options', 'alpha'),
+        'description' => 'You can change the theme color and options here.',
+    ));
+    $wp_customize->add_setting('alpha_primary_color', array(
+        'default' => '#ea1a70',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'alpha_primary_color', array(
+        'label' => 'Primary Color',
+        'description' => 'Select the primary color for the theme.',
+        'section' => 'alpha_theme_color',
+        'settings' => 'alpha_primary_color',
+    )));
+    $wp_customize->add_setting('alpha_secondary_color', array(
+        'default' => '#ffffff',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'alpha_secondary_color', array(
+        'label' => 'Secondary Color',
+        'description' => 'Select the secondary color for the theme.',
+        'section' => 'alpha_theme_color',
+        'settings' => 'alpha_secondary_color',
+    )));
+    $wp_customize->add_setting('alpha_text_color', array(
+        'default' => '#262626',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'alpha_text_color', array(
+        'label' => 'Text Color',
+        'description' => 'Select the secondary color for the theme.',
+        'section' => 'alpha_theme_color',
+        'settings' => 'alpha_text_color',
+    )));
+    $wp_customize->add_setting('alpha_global_bg_color', array(
+        'default' => '#f4f4f4',
+    ));
+    $wp_customize->add_control(new WP_Customize_Color_Control($wp_customize, 'alpha_global_bg_color', array(
+        'label' => 'Global Background Color',
+        'description' => 'Select the secondary color for the theme.',
+        'section' => 'alpha_theme_color',
+        'settings' => 'alpha_global_bg_color',
+    )));
 };
 
 add_action('customize_register', 'alpha_customize_register');
+
+function alpha_theme_color_customize_css()
+{
+?>
+    <style>
+        body {
+            background-color: var(--global-bg);
+        }
+
+        :root {
+            --primary-color: <?php echo get_theme_mod('alpha_primary_color', '#ea1a70'); ?>;
+            --secondary-color: <?php echo get_theme_mod('alpha_secondary_color', '#ffffff'); ?>;
+            --text-color: <?php echo get_theme_mod('alpha_text_color', '#262626'); ?>;
+            --global-bg: <?php echo get_theme_mod('alpha_global_bg_color', '#f4f4f4'); ?>;
+        }
+    </style>
+<?php
+}
+add_action('wp_head', 'alpha_theme_color_customize_css');
