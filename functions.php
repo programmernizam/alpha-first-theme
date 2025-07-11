@@ -18,3 +18,6 @@ include_once('inc/menu_register.php');
 
 // Widget register
 include_once('inc/widget_register.php');
+
+// Custom Post
+include_once('inc/custom_post.php');

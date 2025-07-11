@@ -118,7 +118,6 @@ img {
 #header_area .col-md-9 ul ul li:hover ul li a {
   background: var(--global-bg);
   color: var(--text-color);
-  box-shadow: var(--global-shadow);
 }
 #header_area .col-md-9 ul ul li ul li a:hover {
   background: var(--primary-color);
