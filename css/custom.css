@@ -293,6 +293,7 @@ a.readmore:hover {
   font-size: 16px;
   margin-top: 10px;
 }
+
 /*================== 
 @Page Navigation Css
 ====================*/
@@ -404,4 +405,18 @@ a.readmore:hover {
 .error_page input[type="submit"]:hover {
   background: var(--text-color);
   border-color: var(--text-color);
+}
+
+/* ===================
+@Theme Service area Css
+===================== */
+#service_area {
+  padding: 50px 0;
+}
+#service_area .service_item {
+  text-align: center;
+  padding: 20px;
+  background: var(--secondary-color);
+  box-shadow: var(--global-shadow);
+  border-radius: 5px;
 }

@@ -5,6 +5,7 @@ add_theme_support('title-tag');
 
 // Thumbnail image area
 add_theme_support('post-thumbnails', array('post', 'page', 'service'));
+add_image_size('service', 300, 300, true);
 add_image_size('post-thumbnails', 800, 500, true);
 
 // Excerpt to 40 words
@@ -17,7 +18,7 @@ add_filter('excerpt_more', 'alpha_excerpt_more');
 
 function alpha_excerpt_length($length)
 {
-    return 40;
+    return 20;
 }
 add_filter('excerpt_length', 'alpha_excerpt_length', 999);
 
