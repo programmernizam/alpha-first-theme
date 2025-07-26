@@ -420,3 +420,12 @@ a.readmore:hover {
   box-shadow: var(--global-shadow);
   border-radius: 5px;
 }
+
+/* =============
+@Slider Area Css
+============ */
+.slider img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}

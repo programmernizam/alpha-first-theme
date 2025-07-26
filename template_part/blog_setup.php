@@ -10,6 +10,7 @@ if (have_posts()) :
             </div>
             <div class="post_details">
                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+                <p><i class="fas fa-calendar"></i> <?php echo get_the_date(); ?> <spa>At</spa> <i class="fas fa-clock"></i><?php echo get_the_time(); ?></p>
                 <?php the_excerpt() ?>
             </div>
         </div>

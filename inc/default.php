@@ -4,8 +4,9 @@
 add_theme_support('title-tag');
 
 // Thumbnail image area
-add_theme_support('post-thumbnails', array('post', 'page', 'service'));
+add_theme_support('post-thumbnails', array('post', 'page', 'service', 'slider', 'testimonial'));
 add_image_size('service', 300, 300, true);
+add_image_size('slider', 1920, 700, true);
 add_image_size('post-thumbnails', 800, 500, true);
 
 // Excerpt to 40 words
