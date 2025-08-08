@@ -24,3 +24,6 @@ include_once('inc/custom_post.php');
 
 // Shortcode register
 include_once('inc/shortcode.php');
+
+// Custom Theme Options
+include_once('inc/theme-option/admin_theme_options.php');
