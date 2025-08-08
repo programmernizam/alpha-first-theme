@@ -31,9 +31,22 @@ img {
  @Header Css
 */
 #header_area {
-  padding: 15px 0;
+  padding: 0 0 20px;
   background: var(--secondary-color);
   box-shadow: var(--global-shadow);
+}
+#header_area .header_top_area {
+  background: var(--primary-color);
+  padding: 8px 0;
+  margin-bottom: 15px;
+}
+#header_area .header_top_area p {
+  color: var(--secondary-color);
+  margin: 0;
+  font-size: 14px;
+}
+#header_area .header_top_area p i {
+  margin-right: 5px;
 }
 #header_area .col-md-3 .logo img {
   max-width: 200px;

@@ -1,0 +1,40 @@
+#theme_option_body {
+  background: #fff;
+  padding: 20px;
+  margin-top: 20px;
+  width: 90%;
+  max-width: 1280px;
+}
+
+#theme_option_body label {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: block;
+}
+#theme_option_body input[type="text"] {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  width: 75%;
+  color: #000;
+}
+#theme_option_body input[type="submit"] {
+  background: #ea1a70;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  display: block;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  transition: 0.5s;
+}
+#theme_option_body input[type="submit"]:hover {
+  background: #262626;
+  border-color: #262626;
+}

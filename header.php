@@ -10,6 +10,17 @@
 
 <body <?php body_class(); ?>>
     <header id="header_area" class="<?php echo get_theme_mod('alpha_menu_position') . ' ' . get_theme_mod('alpha_menu_theme'); ?>">
+        <div class="header_top_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 d-flex justify-content-between align-items-center gap-2">
+                        <p><i class="fa-solid fa-location-dot"></i><?php echo get_option('alpha_address_info') ?></p>
+                        <p><i class="fa-solid fa-envelope"></i><?php echo get_option('alpha_email_info') ?></p>
+                        <p><i class="fa-solid fa-phone"></i><?php echo get_option('alpha_phone_info') ?></p>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-3">

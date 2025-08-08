@@ -1,4 +1,21 @@
 <?php
+
+/**
+ * Theme Options Page CSS Enqueue
+ *
+ * @package Alpha
+ */
+function alpha_enqueue_theme_options_css()
+{
+    wp_enqueue_style('alpha-theme-options-css', get_template_directory_uri() . '/css/theme_options.css', array(), '1.0.0');
+}
+add_action('admin_enqueue_scripts', 'alpha_enqueue_theme_options_css');
+/**
+ * Theme Options Page
+ *
+ * @package Alpha
+ */
+
 function alpha_add_theme_page()
 {
     add_menu_page(
